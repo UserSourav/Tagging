@@ -1,0 +1,125 @@
+:root {
+  color-scheme: light;
+  --bg: #f7fff7;
+  --surface: #ffffff;
+  --text: #0f2f1a;
+  --subtle: #2f6d46;
+  --accent: #1f9d52;
+  --accent-soft: #e1f8e9;
+  --border: #b8e6c8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #020c06;
+    --surface: #09160d;
+    --text: #eafdf1;
+    --subtle: #9bd8b1;
+    --accent: #2ed273;
+    --accent-soft: #143222;
+    --border: #24583a;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at top, var(--accent-soft), var(--bg) 35%);
+  color: var(--text);
+}
+
+.page {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.15rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.hero h1 {
+  margin: 0.25rem 0 0.75rem;
+  color: var(--accent);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--subtle);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+code,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace;
+}
+
+pre {
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  overflow-x: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.miniCard {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: color-mix(in oklab, var(--surface), var(--accent-soft) 35%);
+  padding: 0.75rem;
+}
+
+.miniCard h3 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.split {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags span {
+  border: 1px solid var(--border);
+  background: var(--accent-soft);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.86rem;
+}
